@@ -13,24 +13,29 @@ Smart Issue Board is a comprehensive web application that enables users to:
 
 ### 🌐 Live Demo
 
-Check out the live application here: [https://smart-issue-board-7rz4.vercel.app/](https://smart-issue-board-7rz4.vercel.app/)
+Check out the live application here: [https://smart-issue-board-assignment-utbs.vercel.app/](https://smart-issue-board-assignment-utbs.vercel.app/)
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React 18** - Modern UI library with hooks
-- **Vite** - Lightning-fast build tool and dev server
-- **Tailwind CSS** - Utility-first CSS framework for styling
-- **React Context API** - Global state management
-- **Custom Hooks** - Reusable logic (useAuth, useFetchApi, useUser)
-- **Fetch** - HTTP client for API calls
+- **React 18** – Modern UI library with hooks  
+- **Vite** – Lightning-fast build tool and dev server  
+- **Tailwind CSS** – Utility-first CSS framework for styling  
+- **React Context API** – Global state management  
+- **Custom Hooks** – Reusable logic (useAuth, useFetchApi, useUser)  
+- **Fetch API** – HTTP client for API calls  
+- **React Toastify** – Beautiful toast notifications for success & error messages  
+
 
 ### Backend
-- **Node.js** - JavaScript runtime
-- **Express.js** - Minimalist web framework
-- **MongoDB** - NoSQL database
-- **JWT (JSON Web Tokens)** - Secure authentication
-- **Bcrypt** - Password hashing and validation
+- **Node.js** – JavaScript runtime  
+- **Express.js** – Minimalist web framework  
+- **MongoDB** – NoSQL database  
+- **JWT (JSON Web Tokens)** – Secure authentication  
+- **Bcrypt** – Password hashing and validation  
+- **Express Async Handler** – Simplified error handling for async routes  
+- **Validator** – Used for email validation and input sanitization  
+
 
 ## 📁 Project Structure
 
@@ -178,17 +183,18 @@ Assignment-auth/
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---|
-| POST | `/api/user/signup` | Register new user | No |
-| POST | `/api/user/login` | User login | No |
-| GET | `/api/user/profile` | Get user profile | Yes |
+| POST | `/api/v1/user/register` | Register new user | No |
+| POST | `/api/v1/user/login` | User login | No |
+| GET | `/api/v1/user/logout` | Logout User | Yes |
+| GET | `/api/v1/user/me` | Get Current User | Yes |
 
 ### Issue Endpoints
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---|
-| POST | `/api/issue/create` | Create new issue | Yes |
-| GET | `/api/issue/list` | Get all issues | Yes |
-| DELETE | `/api/issue/:id` | Delete issue | Yes |
+| POST | `/api/v1/issue/create-issue` | Create new issue | Yes |
+| GET | `/api/v1/issue/my-issues` | Get all issues | Yes |
+| PATCH | `/api/v1/issue/update-status/:issueId` | Update issue | Yes |
 
 ## 🎯 Available Scripts
 
@@ -245,14 +251,14 @@ NODE_ENV=development
 
 ### Client (.env)
 ```
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:9000
 ```
 
 ## 🐛 Troubleshooting
 
 ### Connection Issues
 - Ensure MongoDB is running and connection string is correct
-- Check if ports 5000 (server) and 5173 (client) are available
+- Check if ports 9000 (server) and 5173 (client) are available
 
 ### Authentication Errors
 - Verify JWT_SECRET is set correctly
