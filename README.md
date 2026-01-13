@@ -107,7 +107,6 @@ Assignment-auth/
 - Create new issues with title and description
 - View all issues in a paginated list
 - Display issue creator information
-- Delete issues (by owner or admin)
 - Real-time issue status updates
 
 ### User Experience
