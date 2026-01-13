@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://smart-issue-board-7rz4.vercel.app",
+      "https://smart-issue-board-assignment-utbs.vercel.app",
     ],
     credentials: true,
   })
