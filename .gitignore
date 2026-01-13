@@ -1,0 +1,8 @@
+# dependencies
+node_modules/
+
+# env files (all folders)
+.env
+.env.local
+.env.development
+.env.production
